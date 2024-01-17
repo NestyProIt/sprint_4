@@ -46,18 +46,22 @@ public class OrderPageScooter {
     public OrderPageScooter(WebDriver driver) {
         this.driver = driver;
     }
+
     //заполнить поле "Имя"
     public void setUsername(String newUserName) {
         driver.findElement(userName).sendKeys(newUserName);
     }
+
     //заполнить поле "Фамилия"
     public void setSurName(String newSurName) {
         driver.findElement(surName).sendKeys(newSurName);
     }
+
     //заполнить поле "Адрес: куда привезти заказ"
     public void setAddressOrder(String newAddressOrder) {
         driver.findElement(addressOrder).sendKeys(newAddressOrder);
     }
+
     //заполнить поле "Станция метро"
     public void setMetroStation() {
         driver.findElement(metroStation).click();
@@ -65,41 +69,50 @@ public class OrderPageScooter {
                 .until(ExpectedConditions.elementToBeClickable(metroStationKrasnoselskaya));
         driver.findElement(metroStationKrasnoselskaya).click();
     }
+
     //заполнить поле "Телефон: на него позвонит курьер"
     public void setUserPhoneNumber(String newUserPhoneNumber) {
         driver.findElement(userPhoneNumber).sendKeys(newUserPhoneNumber);
     }
+
     //кликнуть на кнопку "Далее"
     public void clickOrderNextButtonOrderPage() {
         driver.findElement(orderNextButton).click();
     }
+
     //заполнить поле "Когда привезти самокат"
     public void setOrderDeliveryDate(String newOrderDeliveryDate) {
         driver.findElement(orderDeliveryDate).sendKeys(newOrderDeliveryDate, Keys.ENTER);
     }
+
     //заполнить поле "Срок аренды"
     public void setTimeRentScooter() {
         driver.findElement(timeRentScooter).click();
         driver.findElement(timeRentScooterOneDay).click();
     }
+
     //кликнуть на чекбокс в поле "Цвет самоката"
     public void clickColorScooter() {
         driver.findElement(scooterColorBlackCheckbox).click();
     }
+
     //заполнить поле "Комментарий"
     public void setCommentFoCourier(String newCommentFoCourier) {
         driver.findElement(commentFoCourier).sendKeys(newCommentFoCourier);
     }
+
     //кликнуть на кнопку "Заказать" ниже формы заказа
     public void clickOrderButtonCreate() {
         driver.findElement(orderButtonCreate).click();
     }
+
     //кликнуть на кнопку "Да" в модальном окне "Хотите оформить заказ?"
     public void clickPopUpOrderYesButton() {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(popUpOrderYesButton));
         driver.findElement(popUpOrderYesButton).click();
     }
+
     //проверить модальное окно "Заказ оформлен"
     public boolean texPopUpWindowOrderDone() {
         return driver.findElement(headerPopUpWindowOrderDone).getText().contains("Заказ оформлен");

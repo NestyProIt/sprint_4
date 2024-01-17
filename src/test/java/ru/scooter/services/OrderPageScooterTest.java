@@ -7,7 +7,6 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 import static org.junit.Assert.assertTrue;
 
 
@@ -18,6 +17,7 @@ public class OrderPageScooterTest {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+
         driver.manage().window().maximize();
     }
 

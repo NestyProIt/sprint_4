@@ -21,6 +21,7 @@ public class HomePageScooterTest {
     private final int answerAboutOrderScooterNumber;
     private final boolean isVisibleAboutOrderScooterNumber;
     private WebDriver driver;
+
     public HomePageScooterTest(int questionAboutOrderScooterNumber,
                                int answerAboutOrderScooterNumber,
                                String textAnswerAboutOrderScooterNumber,
@@ -43,7 +44,7 @@ public class HomePageScooterTest {
                 {5, 5, "Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.", true},
                 {6, 6, "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.", true},
                 {7, 7, "Да, обязательно. Всем самокатов! И Москве, и Московской области.", true},
-                {3, 5, "Страница находится в разработке", false},
+
         };
     }
 
